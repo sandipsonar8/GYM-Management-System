@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main_Master.master.cs" Inherits="GYM_4._1.main_Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server"> 
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table align="center" class="auto-style1" style="background-color: #C0C0C0">
+                <tr><td>
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Stock/SGymlogo.png" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><h1><asp:Label ID="lb_headName" runat="server" Text="GYM Management"></asp:Label></h1>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

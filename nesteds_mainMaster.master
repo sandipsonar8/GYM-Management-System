@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/main_Master.Master" AutoEventWireup="true" CodeBehind="nesteds_mainMaster.master.cs" Inherits="GYM_4._1.nesteds_mainMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style2 {
+            width: 338px;
+            height: 110px;
+        }
+        .auto-style3 {
+            height: 110px;
+        }
+        .auto-style4 {
+            height: 20px;
+        width: 332px;
+    }
+        .auto-style5 {
+            margin-left: 2px;
+        }
+    .auto-style6 {
+        width: 332px;
+    }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <table class="auto-style1">
+        <tr>
+            <td class="auto-style2" style="vertical-align:top" >
+                <table class="auto-style1" style="background-color: #C0C0C0">
+                    <tr>
+                        <td class="auto-style6" style="border: medium solid #C0C0C0; background-color: #CCCCCC; list-style-type: none; table-layout: auto; border-collapse: collapse;">
+                            <asp:ImageButton ID="Image1" runat="server" ImageAlign="Middle" ImageUrl="~/Stock/dashboardicon.png" BorderStyle="None" Height="50px" Width="50px" PostBackUrl="~/Dashboard.aspx" />&nbsp; <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Stock/Dash.png" Height="45px" ImageAlign="Middle" Width="152px" onclick="ImageButton1_Click" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style4" style="border: medium solid #C0C0C0; background-color: #CCCCCC; list-style-type: none; table-layout: auto; border-collapse: collapse;">
+                            <asp:Image ID="add_memicon" runat="server" ImageUrl="~/Stock/user-add.png" ImageAlign="Middle" Height="50px" Width="50px" />
+                            &nbsp; <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Stock/addUser.png" CssClass="auto-style5" Height="46px" ImageAlign="Middle" Width="241px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style6" style="border: medium solid #C0C0C0; background-color: #CCCCCC; list-style-type: none; table-layout: auto; border-collapse: collapse;">
+                            <asp:Image ID="view_memicon" runat="server" ImageAlign="Middle" ImageUrl="~/Stock/see-user.png" Height="50px" Width="50px" />                           
+                            &nbsp;                           
+                            <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/Stock/seeUsers.png" Height="45px" ImageAlign="Middle" Width="231px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style6" style="border: medium solid #C0C0C0; background-color: #CCCCCC; list-style-type: none; table-layout: auto; border-collapse: collapse;">
+                            <asp:Image ID="logout_icon" runat="server" ImageUrl="~/Stock/logouticon.png" ImageAlign="Middle" Height="50px" Width="50px" /> &nbsp; <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/Stock/Logout.png" Height="39px" ImageAlign="Middle" Width="102px" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="vertical-align:top; background-color: #FFFFFF;" class="auto-style3" >
+                <asp:ContentPlaceHolder ID="Body" runat="server">
+                    <p>
+                        
+                    </p>
+                    
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

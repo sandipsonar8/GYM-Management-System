@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main_Master.master.cs" Inherits="GYM_4._1.Admin_Panel.Main_Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin Dashboard</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 349px;
+        }
+        .auto-style3 {
+            font-size: large;
+        }
+        .auto-style4 {
+            width: 343px;
+        }
+    </style>
+</head>
+<body style="background-color: 	#d9d2e9">
+    <form id="form1" runat="server"  >
+        <div>
+           
+            <table class="auto-style1" align="top" aria-orientation="horizontal" >
+                <tr>
+                    <td class="auto-style2" align="top">
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style4">
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Stock/SGymlogo.png" Width="278px" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style4">
+                                    &nbsp;&nbsp;&nbsp;
+                                    <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Font-Bold="True" Font-Names="Arial" Font-Size="Large" Text="GYM Management System" Font-Italic="False" Font-Underline="False"></asp:Label>
+                                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Label ID="Label2" runat="server" Text="Admin panel" Font-Bold="True" Font-Italic="True" Font-Size="Large"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style4"><asp:Menu ID="Menu1" runat="server" BackColor="White" DynamicHorizontalOffset="2" Font-Names="Verdana"  Font-Size="Medium" ForeColor="#FFCC99" RenderingMode="List" StaticSubMenuIndent="10px" OnMenuItemClick="Menu1_MenuItemClick" EnableTheming="True">
+                <DynamicHoverStyle BackColor="#666666" ForeColor="White"/>
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                    <DynamicMenuStyle BackColor="#E3EAEB" />
+                <Items>
+                    <asp:MenuItem Text="Dashboard" Value="Dashboard" NavigateUrl="~/Admin Panel/Dashboard.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Add new member" Value="New Item" NavigateUrl="~/Admin Panel/Add_new_member.aspx"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Admin Panel/Add_new_trainer.aspx" Text="Add new trainer" Value="Add new trainer"></asp:MenuItem>
+                    <asp:MenuItem Text="Allocate trainer" Value="Allocate trainer" NavigateUrl="~/Admin Panel/AllocateTrainer.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="View the allocation" Value="View the allocation" NavigateUrl="~/Admin Panel/View_Allocate_Trainer.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="View all members" Value="View all members" NavigateUrl="~/Admin Panel/ViewAllMembers.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="View all trainer" Value="View all trainer" NavigateUrl="~/Admin Panel/ViewAllTrainers.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/logout.aspx"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#666666" ForeColor="#CCCCFF" />
+                <StaticMenuItemStyle HorizontalPadding="35px" VerticalPadding="9px" BackColor="#CCCCFF" Font-Bold="True" Font-Overline="True" Font-Size="Large" ForeColor="Black" />
+                <StaticSelectedStyle BackColor="#1C5E55" />
+            </asp:Menu></td>
+                            </tr>
+                            <tr align="top">
+                                <td align="top" class="auto-style4" >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:HyperLink ID="fbLink" runat="server" ImageUrl="~/Socia_icon/Facebook_icon.png" NavigateUrl="https://www.facebook.com/mahesh.mali.31392"></asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:HyperLink ID="igLink" runat="server" ImageHeight="53px" ImageUrl="~/Socia_icon/Instagram_icon.png" ImageWidth="53px" NavigateUrl="https://www.instagram.com/sonawanesthegym/"></asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:HyperLink ID="whatsappLink" runat="server" ImageUrl="~/Socia_icon/Whatsapp_icon.png" NavigateUrl="https://wa.me/918888443682?text=">HyperLink</asp:HyperLink>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                  <td style="background-color:#ead1dc" >
+                        <asp:ContentPlaceHolder ID="All_contents" runat="server" EnableViewState="True">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+           
+        </div>
+    </form>
+</body>
+</html>
